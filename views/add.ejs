@@ -1,0 +1,14 @@
+<%- include('header.ejs') %>
+  <form action="save" method="post">
+    <p><textarea name="content"></textarea></p>
+    <p><button>전송</button></p>
+  </form>
+  <ul>
+    <% for(let row of rows){ %>
+      <li>
+        <b><%=row.name%></b>
+        <p><%=row.content%></p>
+      </li>
+    <%}%>
+  </ul>
+<%- include('footer.ejs') %>
